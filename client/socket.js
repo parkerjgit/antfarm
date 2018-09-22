@@ -21,23 +21,23 @@ socket.on('new-message', (message) => {
 socket.on('load', function (boxes) {
 
   boxes.forEach(function (box) {
-    const { point, normal, color } = box;
-    addVoxel(point, normal, color, false);
+    const { point, color } = box;
+    addVoxel(point, color, false);
   });
 
 });
 
 // when recieve incoming broadcast from server
-socket.on('someOneDrew', function (point, normal, color) {
+socket.on('someOneDrew', function (point, color) {
   console.log(`recieving color ------------- ${color}`)
-  addVoxel(point, normal, color, false);
+  addVoxel(point, color, false);
 });
 
 // when viewport "broacasts"...
-viewport.on('addVoxel', function (point, normal, color) {
+viewport.on('addVoxel', function (point, color) {
   // socket.emit('draw', mouse);
   console.log(`emiting2 color ------------- ${color}`)
-  socket.emit('addVoxel', point, normal, color)
+  socket.emit('addVoxel', point, color)
 });
 //----------
 

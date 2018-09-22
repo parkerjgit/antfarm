@@ -21,9 +21,9 @@ module.exports = io => {
 
     if (inMemoryDrawHistory.length) socket.emit('load', inMemoryDrawHistory)
 
-    socket.on('addVoxel', (point, normal, color) => {
-      inMemoryDrawHistory.push({ point, normal, color })
-      socket.broadcast.emit('someOneDrew', point, normal, color)
+    socket.on('addVoxel', (point, color) => {
+      inMemoryDrawHistory.push({ point, color })
+      socket.broadcast.emit('someOneDrew', point, color)
     })
 
     socket.on('disconnect', () => {

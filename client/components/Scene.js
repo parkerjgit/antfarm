@@ -14,8 +14,6 @@ import 'three/Projector';
 import 'three/OrbitControls';
 //import {EventEmitter} from 'events';
 
-
-
 // globals
 var container;
 var camera, scene, renderer;
@@ -29,16 +27,21 @@ var orbit;
 
 export const viewport = new EventEmitter();
 //export default viewport;
-export function addVoxel(point, normal, color, shouldBroadcast = true) {
+export function addVoxel(point, color, shouldBroadcast = true) {
+  // console.log(point)
+  // console.log(normal)
+  // var newPos = new THREE.Vector3();
+  // newPos.addVectors ( point, normal );
+  // console.log(newPos)
   cubeMaterial = new THREE.MeshLambertMaterial( { color, overdraw: 0.5 } );
   var voxel = new THREE.Mesh( cubeGeometry, cubeMaterial );
-  voxel.position.copy( point ).add( normal );
+  voxel.position.copy( point ); //.add( normal );
   voxel.position.divideScalar( 50 ).floor().multiplyScalar( 50 ).addScalar( 25 );
   scene.add( voxel );
   objects.push( voxel );
 
   shouldBroadcast &&
-    viewport.emit('addVoxel', point, normal, color)
+    viewport.emit('addVoxel', point, color)
 
     render();
 }
@@ -170,7 +173,11 @@ export default class Scene extends React.Component {
           objects.splice( objects.indexOf( intersect.object ), 1 );
         }
       } else {
-        addVoxel(intersect.point, intersect.face.normal, color, shouldBroadcast);
+        // find new insertion point
+        var newPoint = new THREE.Vector3();
+        newPoint.addVectors ( intersect.point, intersect.face.normal );
+        // render it.
+        addVoxel(newPoint, color, shouldBroadcast);
       }
     }
   }
