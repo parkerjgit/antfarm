@@ -1,6 +1,6 @@
 # Antfarm
 
-Antfarm is the product of a 4 day sprint at Fullstack Academy. It is a collaborative platform for the real-time co-creation of atomic crypto-art. Built with three.js and socketio for bi-directional transmission of shared geometric data. Includes a voxel modeler (inspired and based on Mr doob's [voxel painter](https://mrdoob.com/projects/voxels/)) Also includes support for multiple rooms and real-time messaging services over sockets for social building and project management. Built with Three.js, React, Redux, Sequelize, PostgreSQL, and Socket.io.
+Antfarm is prototype and proof-of-concept for a collaborative platform for the real-time co-creation of atomic crypto-art. It is an experiment in ownership, scarcity and authorsip in the age of microtransactions and rare pepes. 
 
 ## Demo
 
@@ -26,15 +26,24 @@ Antfarm is the product of a 4 day sprint at Fullstack Academy. It is a collabora
 
 ### Dependancies
 
-Grasshopper definitions and python scrips requires the following rhino/gh plugins to work:
-
-```
-Three.js
-React
-Redux
-Sequelize
-PostgreSQL
-Socket.io
+```json
+"axios": "^0.15.3",
+"bootstrap": "^3.3.7",
+"dat.gui": "^0.7.2",
+"express": "^4.14.1",
+"morgan": "^1.8.1",
+"pg": "^6.1.2",
+"pg-hstore": "^2.3.2",
+"react": "^16.2.0",
+"react-dom": "^16.2.0",
+"react-redux": "^5.0.7",
+"react-router-dom": "^4.0.0",
+"redux": "^4.0.0",
+"redux-devtools-extension": "^2.13.5",
+"redux-thunk": "^2.3.0",
+"sequelize": "^4.4.0",
+"socket.io": "^1.7.2",
+"three": "^0.96.0"
 ```
 
 ## Contributors
@@ -42,3 +51,7 @@ Socket.io
 **Joshua Parker** - [parkerjgit.github.io](http://parkerjgit.github.io/)
 
 See full list of [contributors](https://github.com/your/project/contributors) who participated in this project. *Currently no contributors*
+
+## Acknowledgements
+
+Antfarm is the product of a 4 day sprint at [Fullstack Academy](). It includes a [voxel]() modeler (inspired and based on Mr doob's [voxel painter](https://mrdoob.com/projects/voxels/)). It was built with Three.js, React, Redux, Sequelize, PostgreSQL, and Socket.io for real-time messaging services and bi-directional transmission of shared geometry.
