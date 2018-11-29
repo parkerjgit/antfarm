@@ -1,5 +1,7 @@
 # Antfarm
 
+<img src="images/antfarm-ui-inv-2-crop.jpg" width="100%"/>
+
 Antfarm is prototype and proof-of-concept for a collaborative platform for the real-time co-creation of atomic crypto-art. It is an experiment in ownership, scarcity and authorsip in the age of microtransactions and rare pepes. 
 
 ## Demo
@@ -8,6 +10,8 @@ Antfarm is prototype and proof-of-concept for a collaborative platform for the r
 <img src="images/antfarm_pdf/antfarm4.jpg" width="33%"/> <img src="images/antfarm_pdf/antfarm5.jpg" width="33%"/> <img src="images/antfarm_pdf/antfarm6.jpg" width="33%"/> 
 <img src="images/antfarm_pdf/antfarm7.jpg" width="33%"/> <img src="images/antfarm_pdf/antfarm8.jpg" width="33%"/> <img src="images/antfarm_pdf/antfarm9.jpg" width="33%"/> 
 <img src="images/antfarm_pdf/antfarm10.jpg" width="33%"/> <img src="images/antfarm_pdf/antfarm11.jpg" width="33%"/> <img src="images/antfarm_pdf/antfarm12.jpg" width="33%"/> 
+
+[antfarm.pdf](images/antfarm.pdf)
 
 ## Getting Started
 
